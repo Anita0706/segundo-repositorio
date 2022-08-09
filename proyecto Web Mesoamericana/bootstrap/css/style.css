@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans',Arial,sans-serif;
+}
+
+.menu{
+    background-color: #FFFFFF;
+    color: #01633B;
+    height: 70px;
+}
+
+.menu__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu__links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+.menu__item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link{
+    color: #01633B;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu__link:hover{
+    color: #4E9278;
+    background-color: #FEFEFE;
+}
+
+
+.menu__arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting{
+    list-style: none;
+    transition:clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #FFFFFF;
+}
+
+.menu__link--inside{
+    padding: 30px 100px 30px 20px;
+}
+
+.menu__link--inside:hover{
+    background-color: #FEFEFE;
+    color: #4E9278;
+    background-color: #FEFEFE;
+}
+
+.menu__introduction{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img{
+    display: block;
+    width: 36px;
+}
+.menu__img1{
+    display: inline-block;
+    width: 25px;
+    motion-rotation: reverse;
+}
+
+@media (max-width:800px){
+    .menu__introduction{
+        display: flex;
+    }
+
+    .menu__item{
+        --clip:0;
+        overflow:hidden ;
+    }
+
+    .menu__item--active{
+        --transform: rotate(0);
+        --background:  #FEFEFE;
+       
+    }
+
+    .menu__item--show{
+        background-color: var(--background);
+    }
+
+
+    .menu__links{
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 70px;
+        bottom: 0;
+        right: 0;
+        background-color:  #FEFEFE;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%);
+        
+        
+    }
+
+    .menu__links--show{
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu__link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu__arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting{
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu__link--inside{
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #FEFEFE;
+       
+    }
+}
+
+
+.img_principal{
+    display:block;
+    width: 2500px;
+    margin-left: 350px;
+}
+
+ .img_margenIzquierdo{
+
+    margin-left: 550px;
+    padding-right: 20px;
+    margin-top: 0%;
+
+} 
+
+.img_margenTOP{
+
+    margin-top: 100px;
+    margin-left: 300px;
+    
+} 
+
+
+.margenes_logo{
+
+    margin-top: 15%;
+    
+
+}
+
+.parrafosCursiva{
+
+    text-align: center;
+}
+
+.parrafoladoIzquierdo{
+
+    text-align: left;
+}
+
+.margen_left{
+    margin-top: 15%;
+   
+}
+
+.button_NuestrasCarreras{
+
+    background-color: #034430;
+    height: 25%;
+
+}
+
+.button_enviarr{
+
+    margin-left: 188%;
+}
+
+.ImagenDeFondo{
+    background-image: url(/bootstrap/Assets/imagen/instalacion.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.letraPequeConoceCampus{
+
+    text-align: center;
+    color: #FFFFFF;
+    
+
+}
+
+.fondoConoceNuestroCampus{
+    
+    background-color: #034430;
+    /*margin-bottom: 15%;*/
+    text-align: center;
+    
+ 
+}
+
+.fondoOpacity{
+
+    background-image: url(/bootstrap/Assets/imagen/instalacion.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #01633B;
+}
+.letraMayusculasConoceCampus{
+    margin-top: 10%;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.letrasUniversidadMeosamerivvana{
+    margin-top: 15%;
+    text-align: center;
+
+    margin-bottom: 10%;
+    
+}
+
+
+
+
+
+
+
+
+.stilo{
+    margin-left: 10%;
+}
+
+.calendariofinal{
+
+    margin-left: 30%;
+}
+
+
+.libro{
+    margin-left: 45%;
+    margin-bottom: 10%;
+}
+
+.niña{
+    margin-left: 45%;
+    margin-bottom: 10%;
+}
+.manitas{
+    margin-left: 45%;
+    margin-bottom: 10%;
+}
+.herrameintas{
+    margin-left: 45%;
+    margin-bottom: 10%;
+  
+}
+
+.box{
+    width: 70%
+    height: 100% ;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px 0 #111;
+  
+
+}
+
+.caja1{
+    margin-left: 15%;
+   
+
+}
+
+.margen{
+
+    margin-left: 15px;
+    margin-bottom: 75px;
+}
+
+.margen2{
+
+    margin-left: 300px;
+    margin-bottom: 55px;
+}
+.calendarioultimo{
+
+    margin-top: 150px;
+    margin-left: 300px;
+    margin-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.textoNoticias{
+
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.alineacionImagenes{
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+   
+}
+
+.centradoTextoNoticias{
+
+    text-align: justify;
+    margin-left: 5%;
+}
+
+.colorText{
+    
+    background-color: #CFCFCF;
+}
+
+.columans{
+
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+
+footer{
+
+    background-color: #034430;
+    
+}
+
+.letrasFooter{
+    text-shadow: #FFFFFF;
+    text-align: center
+    
+}
+
+.button_Revista{
+
+    margin-left: 35%;
+    background-color: #034430;
+}
+
+.cuadroMantene_info{
+
+    margin-top: 10%;
+
+}
